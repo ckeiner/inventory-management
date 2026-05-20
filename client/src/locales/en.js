@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -106,12 +107,14 @@ export default {
     title: 'Orders',
     description: 'View and manage customer orders',
     allOrders: 'All Orders',
+    submittedOrders: 'Submitted Orders',
     totalOrders: 'Total Orders',
     totalRevenue: 'Total Revenue',
     avgOrderValue: 'Avg Order Value',
     onTimeDelivery: 'On-Time Delivery',
     itemsCount: '{count} items',
     quantity: 'Qty',
+    days: 'days',
     table: {
       orderNumber: 'Order Number',
       orderId: 'Order ID',
@@ -125,7 +128,8 @@ export default {
       totalValue: 'Total Value',
       status: 'Status',
       expectedDelivery: 'Expected Delivery',
-      actualDelivery: 'Actual Delivery'
+      actualDelivery: 'Actual Delivery',
+      deliveryLeadTime: 'Lead Time'
     }
   },
 
@@ -185,6 +189,33 @@ export default {
       change: 'Change',
       trend: 'Trend',
       period: 'Period'
+    }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Generate restocking recommendations based on demand forecasts',
+    setBudget: 'Set Budget',
+    availableBudget: 'Available Budget',
+    generateRecommendations: 'Generate Recommendations',
+    recommendations: 'Recommended Items',
+    items: 'items',
+    noRecommendations: 'No items to recommend within budget. Try increasing your budget.',
+    totalItems: 'Total Items',
+    totalCost: 'Total Cost',
+    remainingBudget: 'Remaining Budget',
+    placeOrder: 'Place Order',
+    submitting: 'Submitting...',
+    table: {
+      sku: 'SKU',
+      itemName: 'Item Name',
+      trend: 'Trend',
+      forecastedDemand: 'Forecasted Demand',
+      quantity: 'Quantity',
+      unitPrice: 'Unit Price',
+      subtotal: 'Subtotal',
+      actions: 'Actions'
     }
   },
 
@@ -323,6 +354,12 @@ export default {
     search: 'Search',
     filter: 'Filter',
     export: 'Export',
-    items: 'items'
+    items: 'items',
+    remove: 'Remove'
+  },
+
+  // Customer Names
+  customerNames: {
+    'Internal Restocking': 'Internal Restocking'
   }
 }
