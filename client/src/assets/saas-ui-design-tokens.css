@@ -1,0 +1,361 @@
+/* ============================================================================
+   SaaS UI Design Tokens
+   Complete design system for modern SaaS applications
+   ============================================================================ */
+
+:root {
+  /* =========================================================================
+     Colors - Sidebar & Main UI
+     ========================================================================= */
+
+  /* Sidebar Background & Structure */
+  --saas-sidebar-bg: #0f172a;
+  --saas-sidebar-border: #334155;
+  --saas-sidebar-hover: #1e293b;
+  --saas-sidebar-active-bg: #1e3a5f;
+
+  /* Sidebar Text & Content */
+  --saas-sidebar-text: #e2e8f0;
+  --saas-sidebar-text-muted: #94a3b8;
+  --saas-sidebar-text-hover: #f1f5f9;
+
+  /* Navigation Active State */
+  --saas-nav-active: #2563eb;
+  --saas-nav-active-bg: #eff6ff;
+  --saas-nav-active-hover: #1d4ed8;
+
+  /* Main Content Background */
+  --saas-content-bg: #f8fafc;
+  --saas-content-bg-alt: #f1f5f9;
+
+  /* Cards & Surfaces */
+  --saas-card-bg: #ffffff;
+  --saas-card-border: #e2e8f0;
+  --saas-card-hover-bg: #f8fafc;
+  --saas-card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --saas-card-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Text Colors */
+  --saas-text-primary: #0f172a;
+  --saas-text-secondary: #334155;
+  --saas-text-muted: #64748b;
+
+  /* Semantic Colors */
+  --saas-success: #10b981;
+  --saas-success-light: #d1fae5;
+  --saas-warning: #f59e0b;
+  --saas-warning-light: #fef3c7;
+  --saas-error: #ef4444;
+  --saas-error-light: #fee2e2;
+  --saas-info: #2563eb;
+  --saas-info-light: #dbeafe;
+
+  /* Border Colors */
+  --saas-border-light: #e2e8f0;
+  --saas-border: #cbd5e1;
+  --saas-border-dark: #94a3b8;
+
+  /* =========================================================================
+     Spacing
+     ========================================================================= */
+
+  /* Sidebar Dimensions */
+  --saas-sidebar-width-expanded: 280px;
+  --saas-sidebar-width-collapsed: 72px;
+  --saas-sidebar-transition-duration: 0.3s;
+
+  /* Padding & Margins */
+  --saas-spacing-xs: 0.5rem;      /* 8px */
+  --saas-spacing-sm: 0.75rem;     /* 12px */
+  --saas-spacing-md: 1rem;        /* 16px */
+  --saas-spacing-lg: 1.5rem;      /* 24px */
+  --saas-spacing-xl: 2rem;        /* 32px */
+  --saas-spacing-2xl: 3rem;       /* 48px */
+
+  /* Component Padding */
+  --saas-card-padding: var(--saas-spacing-lg);
+  --saas-button-padding-y: var(--saas-spacing-sm);
+  --saas-button-padding-x: var(--saas-spacing-lg);
+  --saas-input-padding-y: var(--saas-spacing-sm);
+  --saas-input-padding-x: var(--saas-spacing-md);
+
+  /* Gaps & Gaps */
+  --saas-gap-sm: var(--saas-spacing-sm);
+  --saas-gap-md: var(--saas-spacing-md);
+  --saas-gap-lg: var(--saas-spacing-lg);
+
+  /* =========================================================================
+     Typography
+     ========================================================================= */
+
+  /* Font Family */
+  --saas-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --saas-font-mono: 'Monaco', 'Menlo', 'Courier New', monospace;
+
+  /* Font Sizes */
+  --saas-text-xs: 0.75rem;        /* 12px */
+  --saas-text-sm: 0.875rem;       /* 14px */
+  --saas-text-base: 1rem;         /* 16px */
+  --saas-text-lg: 1.125rem;       /* 18px */
+  --saas-text-xl: 1.25rem;        /* 20px */
+  --saas-text-2xl: 1.5rem;        /* 24px */
+  --saas-text-3xl: 1.875rem;      /* 30px */
+
+  /* Font Weights */
+  --saas-font-normal: 400;
+  --saas-font-medium: 500;
+  --saas-font-semibold: 600;
+  --saas-font-bold: 700;
+
+  /* Line Heights */
+  --saas-leading-tight: 1.25;
+  --saas-leading-normal: 1.5;
+  --saas-leading-relaxed: 1.75;
+
+  /* Letter Spacing */
+  --saas-tracking-tight: -0.025em;
+  --saas-tracking-normal: 0;
+  --saas-tracking-wide: 0.025em;
+
+  /* =========================================================================
+     Border Radius
+     ========================================================================= */
+
+  --saas-radius-sm: 6px;
+  --saas-radius-md: 8px;
+  --saas-radius-lg: 10px;
+  --saas-radius-xl: 12px;
+  --saas-radius-full: 9999px;
+
+  /* Component Radius */
+  --saas-button-radius: var(--saas-radius-md);
+  --saas-input-radius: var(--saas-radius-md);
+  --saas-card-radius: var(--saas-radius-lg);
+  --saas-modal-radius: var(--saas-radius-xl);
+
+  /* =========================================================================
+     Shadows
+     ========================================================================= */
+
+  --saas-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --saas-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --saas-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --saas-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+  /* Component Shadows */
+  --saas-card-shadow: var(--saas-shadow-sm);
+  --saas-card-shadow-hover: var(--saas-shadow-md);
+  --saas-dropdown-shadow: var(--saas-shadow-lg);
+  --saas-modal-shadow: var(--saas-shadow-xl);
+
+  /* =========================================================================
+     Transitions & Animations
+     ========================================================================= */
+
+  --saas-transition-fast: 150ms;
+  --saas-transition-base: 200ms;
+  --saas-transition-slow: 300ms;
+
+  --saas-easing-linear: linear;
+  --saas-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --saas-easing-in: cubic-bezier(0.4, 0, 1, 1);
+  --saas-easing-out: cubic-bezier(0, 0, 0.2, 1);
+
+  /* Transition shorthands */
+  --saas-transition: all var(--saas-transition-base) var(--saas-easing-in-out);
+  --saas-transition-fast: all var(--saas-transition-fast) var(--saas-easing-in-out);
+  --saas-transition-slow: all var(--saas-transition-slow) var(--saas-easing-in-out);
+
+  /* =========================================================================
+     Z-Index Scale
+     ========================================================================= */
+
+  --saas-z-hide: -1;
+  --saas-z-base: 0;
+  --saas-z-dropdown: 1000;
+  --saas-z-sticky: 100;
+  --saas-z-fixed: 500;
+  --saas-z-modal-backdrop: 1040;
+  --saas-z-modal: 1050;
+  --saas-z-popover: 1060;
+  --saas-z-tooltip: 1070;
+  --saas-z-notification: 1080;
+
+  /* =========================================================================
+     Breakpoints (use in media queries)
+     ========================================================================= */
+
+  --saas-breakpoint-mobile: 640px;
+  --saas-breakpoint-tablet: 768px;
+  --saas-breakpoint-desktop: 1024px;
+  --saas-breakpoint-wide: 1280px;
+  --saas-breakpoint-ultrawide: 1536px;
+}
+
+/* ============================================================================
+   Responsive Design - Tablet
+   ============================================================================ */
+
+@media (max-width: 1024px) {
+  :root {
+    --saas-sidebar-width-expanded: 240px;
+  }
+}
+
+/* ============================================================================
+   Responsive Design - Mobile
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --saas-sidebar-width-expanded: 100%;
+    --saas-card-padding: var(--saas-spacing-md);
+  }
+}
+
+/* ============================================================================
+   Global Styles
+   ============================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--saas-font-family);
+  font-size: var(--saas-text-base);
+  line-height: var(--saas-leading-normal);
+  color: var(--saas-text-primary);
+  background-color: var(--saas-content-bg);
+}
+
+/* ============================================================================
+   Utility Classes
+   ============================================================================ */
+
+.saas-text-primary {
+  color: var(--saas-text-primary);
+}
+
+.saas-text-secondary {
+  color: var(--saas-text-secondary);
+}
+
+.saas-text-muted {
+  color: var(--saas-text-muted);
+}
+
+.saas-text-white {
+  color: #ffffff;
+}
+
+/* Success variant */
+.saas-text-success {
+  color: var(--saas-success);
+}
+
+.saas-bg-success {
+  background-color: var(--saas-success);
+}
+
+.saas-bg-success-light {
+  background-color: var(--saas-success-light);
+}
+
+/* Warning variant */
+.saas-text-warning {
+  color: var(--saas-warning);
+}
+
+.saas-bg-warning {
+  background-color: var(--saas-warning);
+}
+
+.saas-bg-warning-light {
+  background-color: var(--saas-warning-light);
+}
+
+/* Error variant */
+.saas-text-error {
+  color: var(--saas-error);
+}
+
+.saas-bg-error {
+  background-color: var(--saas-error);
+}
+
+.saas-bg-error-light {
+  background-color: var(--saas-error-light);
+}
+
+/* Info variant */
+.saas-text-info {
+  color: var(--saas-info);
+}
+
+.saas-bg-info {
+  background-color: var(--saas-info);
+}
+
+.saas-bg-info-light {
+  background-color: var(--saas-info-light);
+}
+
+/* Shadows */
+.saas-shadow-sm {
+  box-shadow: var(--saas-shadow-sm);
+}
+
+.saas-shadow-md {
+  box-shadow: var(--saas-shadow-md);
+}
+
+.saas-shadow-lg {
+  box-shadow: var(--saas-shadow-lg);
+}
+
+.saas-shadow-xl {
+  box-shadow: var(--saas-shadow-xl);
+}
+
+/* Transitions */
+.saas-transition {
+  transition: var(--saas-transition);
+}
+
+.saas-transition-fast {
+  transition: var(--saas-transition-fast);
+}
+
+.saas-transition-slow {
+  transition: var(--saas-transition-slow);
+}
+
+/* Cursor */
+.saas-cursor-pointer {
+  cursor: pointer;
+}
+
+.saas-cursor-default {
+  cursor: default;
+}
+
+.saas-cursor-disabled {
+  cursor: not-allowed;
+}
+
+/* Display */
+.saas-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

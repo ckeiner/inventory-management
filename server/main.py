@@ -120,6 +120,12 @@ class CreatePurchaseOrderRequest(BaseModel):
     expected_delivery_date: str
     notes: Optional[str] = None
 
+class CreateOrderRequest(BaseModel):
+    customer: str
+    items: List[dict]
+    warehouse: str = "San Francisco"
+    category: Optional[str] = None
+
 # API endpoints
 @app.get("/")
 def root():
@@ -160,6 +166,52 @@ def get_order(order_id: str):
     if not order:
         raise HTTPException(status_code=404, detail="Order not found")
     return order
+
+@app.post("/api/orders", response_model=Order)
+def create_order(order_request: CreateOrderRequest):
+    """Create a new order (for restocking)"""
+    from datetime import datetime, timedelta
+
+    # Generate new order ID (max ID + 1)
+    max_id = max([int(order["id"]) for order in orders]) if orders else 0
+    new_id = str(max_id + 1)
+
+    # Generate order number following existing pattern
+    new_order_number = f"ORD-2025-{new_id.zfill(4)}"
+
+    # Calculate total value
+    total_value = sum(item["quantity"] * item["unit_price"] for item in order_request.items)
+
+    # Set dates (7-day lead time)
+    order_date = datetime.now().isoformat()
+    expected_delivery = (datetime.now() + timedelta(days=7)).isoformat()
+
+    # Infer category from first item's inventory category
+    category = order_request.category
+    if not category and order_request.items:
+        first_sku = order_request.items[0]["sku"]
+        inv_item = next((item for item in inventory_items if item["sku"] == first_sku), None)
+        category = inv_item["category"] if inv_item else "Mixed"
+
+    # Create new order
+    new_order = {
+        "id": new_id,
+        "order_number": new_order_number,
+        "customer": order_request.customer,
+        "items": order_request.items,
+        "status": "Processing",
+        "warehouse": order_request.warehouse,
+        "category": category,
+        "order_date": order_date,
+        "expected_delivery": expected_delivery,
+        "total_value": round(total_value, 2),
+        "actual_delivery": None
+    }
+
+    # Add to in-memory orders list
+    orders.append(new_order)
+
+    return new_order
 
 @app.get("/api/demand", response_model=List[DemandForecast])
 def get_demand_forecasts():
